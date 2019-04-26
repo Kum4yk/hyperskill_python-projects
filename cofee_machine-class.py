@@ -133,13 +133,11 @@ class CoffeeMachine:
 
     def hyperskill_test(self):
         in_command = ""
-        while True:
+        while in_command != "exit":
             print()
             while in_command not in self.__action_commands:
                 in_command = input("Write action (buy, fill, take, remaining, exit): ").casefold()
                 print()
-            if in_command == "exit":
-                break
 
             if in_command == "buy":
                 while in_command not in self.__buy_commands:
@@ -159,7 +157,6 @@ class CoffeeMachine:
                 print("I gave you {}".format(self.take()))
             elif in_command == "remaining":
                 print(self)
-
             in_command = ""
 
 
