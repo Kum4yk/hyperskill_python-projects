@@ -47,10 +47,10 @@ class CoffeeMachine:
                "{2} of coffee beans\n" \
                "{3} of disposable cups\n" \
                "{4} of money".format(self.__get_water(),
-                                       self.__get_milk(),
-                                       self.__get_beans(),
-                                       self.__get_cups(),
-                                       self.__get_money())
+                                     self.__get_milk(),
+                                     self.__get_beans(),
+                                     self.__get_cups(),
+                                     self.__get_money())
 
     def __add_fields(self, added_water=0,
                      added_milk=0, added_beans=0,
