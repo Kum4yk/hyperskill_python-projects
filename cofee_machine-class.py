@@ -1,5 +1,4 @@
 import copy
-import enum
 
 
 class CoffeeMachine:
@@ -9,7 +8,6 @@ class CoffeeMachine:
     __action_commands = {
         "buy", "fill", "take", "remaining", "exit"
     }
-    # machine_state = enum(ACTION=1, BUY=1)
 
     def __init__(self, water: int, milk: int,
                  beans: int, cups: int, money: int):
@@ -73,7 +71,7 @@ class CoffeeMachine:
     def __buy(self, needed_water, needed_milk,
               needed_beans, added_money):
         if self.__check_resource(needed_water, needed_milk,
-              needed_beans):
+                                 needed_beans):
             self.__add_fields(added_water=-needed_water,
                               added_milk=-needed_milk,
                               added_beans=-needed_beans,
@@ -86,9 +84,18 @@ class CoffeeMachine:
                 and self.__get_beans() >= needed_beans \
                 and self.__get_milk() >= needed_milk \
                 and self.__get_cups() > 0:
+            print("I have enough resources, making you a coffee!")
             return True
         else:
-            print("I have enough resources, making you a coffee!")
+            if needed_water > self.__get_water():
+                print("Sorry, not enough water!")
+            if needed_beans > self.__get_beans():
+                print("Sorry, not enough coffee beans!")
+            if needed_milk > self.__get_milk():
+                print("Sorry, not enough milk!")
+            if self.__get_cups() == 0:
+                print("Sorry, not enough cups!")
+            return False
 
     def buy_espresso(self):
         esp_water = 250
@@ -126,7 +133,6 @@ class CoffeeMachine:
 
     def hyperskill_test(self):
         in_command = ""
-
         while True:
             print()
             while in_command not in self.__action_commands:
@@ -161,4 +167,3 @@ if __name__ == "__main__":
     some = CoffeeMachine(400, 540, 120, 9, 550)
     print(some)
     some.hyperskill_test()
-
