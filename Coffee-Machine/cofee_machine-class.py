@@ -131,7 +131,7 @@ class CoffeeMachine:
         self.__add_fields(added_water=water, added_milk=milk,
                           added_beans=coffee, added_cups=cups)
 
-    def hyperskill_test(self):
+    def main(self):
         in_command = ""
         while in_command != "exit":
             print()
@@ -163,4 +163,4 @@ class CoffeeMachine:
 if __name__ == "__main__":
     some = CoffeeMachine(400, 540, 120, 9, 550)
     print(some)
-    some.hyperskill_test()
+    some.main()
