@@ -77,7 +77,195 @@
           </option>
           <option name="stepikChangeStatus" value="Up to date" />
           <option name="taskToTopics">
-            <map />
+            <map>
+              <entry key="0">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="333" />
+                      <option name="theoryId" value="5204" />
+                      <option name="title" value="Introduction to Python" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="336" />
+                      <option name="theoryId" value="5208" />
+                      <option name="title" value="The first program" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="335" />
+                      <option name="theoryId" value="5233" />
+                      <option name="title" value="Multi-line programs" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="1">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="402" />
+                      <option name="theoryId" value="5879" />
+                      <option name="title" value="PEP 8" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="403" />
+                      <option name="theoryId" value="6081" />
+                      <option name="title" value="Comments" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="394" />
+                      <option name="theoryId" value="5852" />
+                      <option name="title" value="Basic data types" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="396" />
+                      <option name="theoryId" value="5859" />
+                      <option name="title" value="Variables" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="395" />
+                      <option name="theoryId" value="5979" />
+                      <option name="title" value="List" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="404" />
+                      <option name="theoryId" value="5913" />
+                      <option name="title" value="Taking input" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="2">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="398" />
+                      <option name="theoryId" value="5865" />
+                      <option name="title" value="Integer arithmetic" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="415" />
+                      <option name="theoryId" value="6025" />
+                      <option name="title" value="Boolean logic" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="397" />
+                      <option name="theoryId" value="5885" />
+                      <option name="title" value="Naming variables" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="399" />
+                      <option name="theoryId" value="5872" />
+                      <option name="title" value="Program with numbers" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="405" />
+                      <option name="theoryId" value="5920" />
+                      <option name="title" value="Comparisons" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="406" />
+                      <option name="theoryId" value="5953" />
+                      <option name="title" value="If statement" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="407" />
+                      <option name="theoryId" value="5932" />
+                      <option name="title" value="Else statement" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="408" />
+                      <option name="theoryId" value="5926" />
+                      <option name="title" value="Elif statement" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="3">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="431" />
+                      <option name="theoryId" value="6440" />
+                      <option name="title" value="Avoiding bad comments" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="440" />
+                      <option name="theoryId" value="6224" />
+                      <option name="title" value="Type casting" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="400" />
+                      <option name="theoryId" value="5891" />
+                      <option name="title" value="Invoking a function" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="401" />
+                      <option name="theoryId" value="5900" />
+                      <option name="title" value="Declaring a function" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="455" />
+                      <option name="theoryId" value="6322" />
+                      <option name="title" value="Scopes" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="4">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="418" />
+                      <option name="theoryId" value="6047" />
+                      <option name="title" value="Program execution" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="419" />
+                      <option name="theoryId" value="6052" />
+                      <option name="title" value="Errors" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="5">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="414" />
+                      <option name="theoryId" value="6019" />
+                      <option name="title" value="Load module" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="448" />
+                      <option name="theoryId" value="6263" />
+                      <option name="title" value="Random" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+              <entry key="6">
+                <value>
+                  <list>
+                    <HyperskillTopic>
+                      <option name="id" value="409" />
+                      <option name="theoryId" value="5940" />
+                      <option name="title" value="While loop" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="429" />
+                      <option name="theoryId" value="6065" />
+                      <option name="title" value="For loop" />
+                    </HyperskillTopic>
+                    <HyperskillTopic>
+                      <option name="id" value="453" />
+                      <option name="theoryId" value="6302" />
+                      <option name="title" value="Loop control statements" />
+                    </HyperskillTopic>
+                  </list>
+                </value>
+              </entry>
+            </map>
           </option>
           <option name="updateDate" value="0" />
           <option name="hyperskillProject">
@@ -93,7 +281,7 @@
           <option name="items">
             <list>
               <FrameworkLesson>
-                <option name="currentTaskIndex" value="0" />
+                <option name="currentTaskIndex" value="2" />
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="1" />
@@ -116,9 +304,9 @@
                       <option name="id" value="6503" />
                       <option name="index" value="1" />
                       <option name="name" value="Print a state of the game field" />
-                      <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="record" value="1" />
+                      <option name="status" value="Solved" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
                           <entry key="tests.py">
@@ -217,7 +405,7 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="tictactoe/tictactoe.py" />
                                 <option name="text" value="# write your code here&#10;" />
                                 <option name="trackChanges" value="true" />
@@ -243,9 +431,9 @@
                       <option name="id" value="6504" />
                       <option name="index" value="2" />
                       <option name="name" value="Create a simple game field" />
-                      <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="record" value="2" />
+                      <option name="status" value="Failed" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
                           <entry key="tests.py">
@@ -344,7 +532,7 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="tictactoe/tictactoe.py" />
                                 <option name="text" value="# write your code here&#10;" />
                                 <option name="trackChanges" value="true" />
