@@ -924,7 +924,7 @@
                       <option name="index" value="6" />
                       <option name="name" value="The value of life" />
                       <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
+                      <option name="status" value="Failed" />
                       <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
@@ -1026,7 +1026,22 @@
                                 </option>
                                 <option name="highlightErrors" value="true" />
                                 <option name="name" value="hangman/hangman.py" />
-                                <option name="text" value="import random&#10;&#10;&#10;class Hangman:&#10;    __possible_words = {'python', 'java', 'kotlin', 'javascript'}&#10;    __attempts = 8&#10;&#10;    def __init__(self):&#10;        self.guessed_word = random.choice(tuple(self.__possible_words)).lower()&#10;        self.current_result = &quot;-&quot; * len(self.guessed_word)&#10;        self.guessed_letters = set(self.guessed_word)&#10;&#10;    def test2(self):&#10;        count = 0&#10;        while count &lt; Hangman.__attempts:&#10;            char = input(&quot;Input a letter: &quot;).lower()&#10;            if char in self.guessed_letters:&#10;                for i in range(len(self.guessed_word)):&#10;                    if self.guessed_word[i] == char:&#10;                        self.current_result = \&#10;                            self.current_result[:i] + char + self.current_result[i+1:]&#10;            else:&#10;                print(&quot;No such letter in the word&quot;)&#10;            count += 1&#10;            print()&#10;&#10;            # if self.current_result == self.guessed_word:&#10;            #    break&#10;        print(&quot;Thanks for playing!\n&quot;&#10;              &quot;We'll see how well you did in the next stage&quot;)&#10;&#10;&#10;if __name__ == '__main__':&#10;    # print()&#10;    game = Hangman()&#10;    game.test2()&#10;" />
+                                <option name="text" value="" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="hangman/__pycache__/hangman.cpython-36.pyc">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="hangman/__pycache__/hangman.cpython-36.pyc" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="visible" value="true" />
