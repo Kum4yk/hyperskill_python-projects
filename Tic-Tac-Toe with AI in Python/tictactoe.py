@@ -16,6 +16,7 @@ class TicTacToe:
 
 
 if __name__ == "__main__":
-    some_list = list(input("Enter cells: ")[1:-1])
+    input_str = input("Enter cells: ")
+    some_list = list(input_str[1:-1])
     game = TicTacToe(some_list)
     game.print_matrix()
