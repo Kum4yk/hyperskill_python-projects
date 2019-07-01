@@ -560,7 +560,7 @@
                       <option name="name" value="Print the game state" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
                           <entry key="tests.py">
@@ -662,6 +662,21 @@
                                 <option name="highlightErrors" value="false" />
                                 <option name="name" value="tictactoe/tictactoe.py" />
                                 <option name="text" value="# write your code here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tictactoe/TEST.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="tictactoe/TEST.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="visible" value="true" />
