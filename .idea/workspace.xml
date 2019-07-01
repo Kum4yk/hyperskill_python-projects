@@ -11,45 +11,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/tictactoe.py">
-          <provider selected="true" editor-type-id="StudyEditor">
-            <state>
-              <EduEditorState>
-                <MainEditorState relative-caret-position="357">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
-                </MainEditorState>
-              </EduEditorState>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/TEST.py">
-          <provider selected="true" editor-type-id="StudyEditor">
-            <state>
-              <EduEditorState>
-                <MainEditorState relative-caret-position="924">
-                  <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-                </MainEditorState>
-              </EduEditorState>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/522226022/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="8823">
               <caret line="519" column="4" selection-start-line="519" selection-start-column="4" selection-end-line="519" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/123.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" selection-end-line="19" />
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -86,30 +60,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Course">
+      <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="hyperskill_python-projects" type="a264ea2a:RootNode" />
-              <item name="hyperskill_python-projects" type="ed842865:CourseNode" />
-            </path>
-            <path>
-              <item name="hyperskill_python-projects" type="a264ea2a:RootNode" />
-              <item name="hyperskill_python-projects" type="ed842865:CourseNode" />
-              <item name="task" type="a27419f0:FrameworkLessonNode" />
-            </path>
-            <path>
-              <item name="hyperskill_python-projects" type="a264ea2a:RootNode" />
-              <item name="hyperskill_python-projects" type="ed842865:CourseNode" />
-              <item name="task" type="a27419f0:FrameworkLessonNode" />
-              <item name="tictactoe" type="61faebc3:DirectoryNode" />
+              <item name="hyperskill_python-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hyperskill_python-projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,7 +179,7 @@
     <frame x="496" y="0" width="1430" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12919708" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1321168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -238,39 +201,19 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/tictactoe.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state>
-          <EduEditorState>
-            <MainEditorState relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </MainEditorState>
-          </EduEditorState>
+    <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/tictactoe.py" />
+    <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/TEST.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/522226022/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8823">
+          <caret line="519" column="4" selection-start-line="519" selection-start-column="4" selection-end-line="519" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/123.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/522226022/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="519" column="4" selection-start-line="519" selection-start-column="4" selection-end-line="519" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tic-Tac-Toe with AI in Python/task/tictactoe/TEST.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state>
-          <EduEditorState>
-            <MainEditorState relative-caret-position="924">
-              <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-            </MainEditorState>
-          </EduEditorState>
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
