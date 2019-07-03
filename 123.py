@@ -1,19 +1,22 @@
-roots = input().split()
-affixes = input().split()
-word = input()
-is_word = False
-for root in roots:
-    if word.startswith(root):
-        for suffix in affixes:
-            if word == root + suffix:
-                is_word = True
-                break
-    elif word.endswith(root):
-        for prefix in affixes:
-            if word == prefix + root:
-                is_word = True
-                break
-if is_word:
-    print("It is a word")
-else:
-    print("It is not a word")
+animal_list = [['chicken', 23],
+               ['dog', 137],
+               ['goat', 678],
+               ['pig', 1296],
+               ['cow', 3848],
+               ['Sheep', 6769]]
+animal_list.sort(key=lambda x: x[1], reverse=True)
+none_flag = True
+
+money = int(input())
+for name, price in animal_list:
+    if money // price <= 0:
+        continue
+    else:
+        print(money // price,
+              " " + name,
+              's' if money // price > 1 else '',
+              sep='', end='')
+        none_flag = False
+        break
+if none_flag:
+    print("None")
