@@ -46,4 +46,5 @@ def cook_book():
 
 
 if __name__ == '__main__':
-    cook_book()
+    print(asdvc)
+
