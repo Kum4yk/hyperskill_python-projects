@@ -56,5 +56,3 @@ if __name__ == "__main__":
         print(4)
     else:
         print(5)
-
-
