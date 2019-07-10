@@ -1,6 +1,6 @@
 class SmartCalculator:
     @staticmethod
-    def sum_2_values():
+    def input_working():
         stop = "/exit"
         while True:
             values = input().rstrip()
@@ -11,8 +11,20 @@ class SmartCalculator:
                 print("The program calculates the sum of numbers")
             elif values == '':
                 continue
-            print(sum(map(int, values.split())))
+            print(SmartCalculator.string_handling(values))
+
+    @staticmethod
+    def string_handling(input_string):
+        sign = 0
+        result = 0
+        for number in input_string.split():
+            if number.isnumeric() or number[1:].isnumeric() or number[:-1].isnumeric():
+                result += int(number) * (1 if sign % 2 == 0 else -1)
+                sign = 0
+            elif number[0] == '-':
+                sign += len(number)
+        return result
 
 
 if __name__ == "__main__":
-    SmartCalculator.sum_2_values()
+    SmartCalculator.input_working()
