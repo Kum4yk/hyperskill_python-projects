@@ -3,3 +3,5 @@
 
 ### Result:
 - Best project for Python Basics: functions, loops, lists and other variables. And Random module as a cherry on top. Don’t be intimidated by the number of stages, they ensure that your dive in Python is smooth and safe.
+
+### [Description link](https://hyperskill.org/projects/69?goal=391)
