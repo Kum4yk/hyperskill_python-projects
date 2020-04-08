@@ -7,7 +7,7 @@ class CreditCalculator:
         self.type = calc_type
         self.principal = principal
         self.periods = periods
-        self.interest = None if interest is None else interest / (100 * 12)
+        self.interest = interest / (100 * 12)
         self.payment = payment
 
     def __calc_additional(self):
