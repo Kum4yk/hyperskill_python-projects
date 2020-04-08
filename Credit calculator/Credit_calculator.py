@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     lst = [args.type, args.principal, args.periods, args.interest, args.payment]
-    if lst.count(None) != 1 or lst[3] is None:
+    if lst.count(None) != 1 or args.interest is None:
         print("Incorrect parameters.")
     else:
         credit_calc = CreditCalculator(*lst)
