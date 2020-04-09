@@ -20,15 +20,15 @@ class CreditCalculator:
                 self.interest + 1
             )
         )
-        y, m = self.periods // 12, self.periods % 12
-        y_s, m_s = ["s" if x > 1 else "" for x in (y, m)]
+        years, months = self.periods // 12, self.periods % 12
+        year_end, month_end = ["s" if x > 1 else "" for x in (years, months)]
 
-        m = f" {m} month{m_s}" if m else ""
-        y = f"{y} year{y_s}" + " and" * bool(m) if y else ""
+        months = f" {months} month{month_end}" if months else ""
+        years = f"{years} year{year_end}" + " and" * bool(months) if years else ""
 
         overpayment = self.payment * self.periods - self.principal
 
-        return f"You need {y}{m} to repay this credit!\nOverpayment = {overpayment}"
+        return f"You need {years}{months} to repay this credit!\nOverpayment = {overpayment}"
 
     def __calc_diff_payment(self):
         all_payments = 0
