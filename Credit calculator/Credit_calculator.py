@@ -7,11 +7,17 @@ class CreditCalculator:
         self.type = calc_type
         self.principal = principal
         self.periods = periods
-        self.interest = interest / (100 * 12)
+        self.interest = interest if interest is None else interest / (100 * 12)
         self.payment = payment
+        self.overpayment = 0
 
     def __calc_additional(self):
         return self.interest * (1 + self.interest) ** self.periods / ((1 + self.interest) ** self.periods - 1)
+
+    def __calc_overpayment(self, all_payment=0):
+        if self.type == "diff":
+            return all_payment - self.principal
+        return self.payment * self.periods - self.principal
 
     def __calc_periods(self):
         self.periods = math.ceil(
@@ -22,13 +28,11 @@ class CreditCalculator:
         )
         years, months = self.periods // 12, self.periods % 12
         year_end, month_end = ["s" if x > 1 else "" for x in (years, months)]
-
         months = f" {months} month{month_end}" if months else ""
         years = f"{years} year{year_end}" + " and" * bool(months) if years else ""
 
-        overpayment = self.payment * self.periods - self.principal
-
-        return f"You need {years}{months} to repay this credit!\nOverpayment = {overpayment}"
+        self.overpayment = self.__calc_overpayment()
+        return f"You need {years}{months} to repay this credit!\nOverpayment = {self.overpayment}"
 
     def __calc_diff_payment(self):
         all_payments = 0
@@ -40,24 +44,33 @@ class CreditCalculator:
             all_payments += diff_pay
             print(f"Month {i}: paid out {diff_pay}")
         print()
-        overpayment = all_payments - self.principal
-        return f"Overpayment = {overpayment}"
+
+        self.overpayment = self.__calc_overpayment(all_payments)
+        return f"Overpayment = {self.overpayment}"
 
     def __calc_payment(self):
         self.payment = math.ceil(
             self.principal * self.__calc_additional()
         )
-        overpayment = self.payment * self.periods - self.principal
-
-        return f"Your annuity payment = {self.payment}!\nOverpayment = {overpayment}"
+        self.overpayment = self.__calc_overpayment()
+        return f"Your annuity payment = {self.payment}!\nOverpayment = {self.overpayment}"
 
     def __calc_principal(self):
         self.principal = int(self.payment / self.__calc_additional())
-        overpayment = self.periods * self.payment - self.principal
+        self.overpayment = self.__calc_overpayment()
+        return f"Your credit principal = {self.principal}!\nOverpayment = {self.overpayment}"
 
-        return f"Your credit principal = {self.principal}!\nOverpayment = {overpayment}"
+    def check_state(self):
+        lst = [self.type, self.principal, self.periods, self.interest, self.payment]
+        if self.interest is None or lst.count(None) != 1 or \
+                any([elem < 0 for elem in lst[1:] if elem is not None]):
+            return False
+        return True
 
     def do_calc(self):
+        if not self.check_state():
+            return "Incorrect parameters."
+
         if self.periods is None:
             return self.__calc_periods()
         if self.principal is None:
@@ -66,6 +79,8 @@ class CreditCalculator:
             if self.type == "diff":
                 return self.__calc_diff_payment()
             return self.__calc_payment()
+
+        return "Impossible output by task condition!"
 
 
 if __name__ == "__main__":
@@ -77,9 +92,6 @@ if __name__ == "__main__":
     parser.add_argument("--payment", type=int)
 
     args = parser.parse_args()
-    lst = [args.type, args.principal, args.periods, args.interest, args.payment]
-    if lst.count(None) != 1 or args.interest is None:
-        print("Incorrect parameters.")
-    else:
-        credit_calc = CreditCalculator(*lst)
-        print(credit_calc.do_calc())
+    credit_calc = CreditCalculator(args.type, args.principal, args.periods,
+                                   args.interest, args.payment)
+    print(credit_calc.do_calc())
