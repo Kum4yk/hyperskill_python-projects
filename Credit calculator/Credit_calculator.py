@@ -1,9 +1,10 @@
 import argparse
 import math
+import numbers
 
 
 class CreditCalculator:
-    def __init__(self, calc_type, principal, periods, interest, payment):
+    def __init__(self,interest, calc_type, principal, periods, payment):
         self.type = calc_type
         self.principal = principal
         self.periods = periods
@@ -61,9 +62,9 @@ class CreditCalculator:
         return f"Your credit principal = {self.principal}!\nOverpayment = {self.overpayment}"
 
     def check_state(self):
-        lst = [self.type, self.principal, self.periods, self.interest, self.payment]
+        lst = [self.type, self.principal, self.periods, self.payment]
         if self.interest is None or lst.count(None) != 1 or \
-                any([elem < 0 for elem in lst[1:] if elem is not None]):
+                any([elem < 0 for elem in lst if isinstance(elem, numbers.Number)]):
             return False
         return True
 
@@ -92,6 +93,10 @@ if __name__ == "__main__":
     parser.add_argument("--payment", type=int)
 
     args = parser.parse_args()
-    credit_calc = CreditCalculator(args.type, args.principal, args.periods,
-                                   args.interest, args.payment)
+    params = [args.interest, args.type, args.principal,
+              args.periods, args.payment]
+
+    credit_calc = CreditCalculator(*params)
+
     print(credit_calc.do_calc())
+
