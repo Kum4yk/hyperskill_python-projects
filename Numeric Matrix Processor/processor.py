@@ -87,16 +87,34 @@ class Matrix:
     @staticmethod
     def calc_det(matrix: list):
         rows, cols = len(matrix), len(matrix[0])
-        if rows != cols:
-            return 'The operation cannot be performed.'
         if rows == 1:
             return matrix[0][0]
+        if rows != cols:
+            return 'The operation cannot be performed.'
+
         answer = 0
         for i in range(cols):
             minor = [line[0: i] + line[i+1:] for line in matrix[1:]]
             const = -1 if i % 2 == 1 else 1
             answer += Matrix.calc_det(minor) * const * matrix[0][i]
         return answer
+
+    def inverse(self):
+        if self.dimension[0] != self.dimension[1]:
+            return 'The operation cannot be performed.'
+        det = self.det()
+        if det == 0:
+            return "This matrix doesn't have an inverse."
+        result = [[0 for _ in range(self.__columns)] for _ in range(self.__rows)]
+        for row in range(self.__rows):
+            for col in range(self.__columns):
+                minor = [
+                    [self.matrix[i][j] for j in range(self.__columns) if j != col]
+                    for i in range(self.__rows) if i != row
+                ]
+                sign = 1 if (row + col) % 2 == 0 else -1
+                result[row][col] = sign * Matrix.calc_det(minor)
+        return Matrix(result).transpose() * (1 / det)
 
 
 class Processor:
@@ -163,14 +181,7 @@ class Processor:
     @staticmethod
     def inverse_matrix():
         matrix = Processor.create_1_matrix()
-        if matrix.dimension[0] != matrix.dimension[1]:
-            return 'The operation cannot be performed.'
-        det = matrix.det()
-        if det == 0:
-            return "This matrix doesn't have an inverse."
-        trans = matrix.transpose()
-        print(trans)
-        print(trans * (1 / det))
+        Processor.print_result(matrix.inverse())
 
     @staticmethod
     def transpose():
@@ -231,4 +242,3 @@ class Processor:
 
 if __name__ == '__main__':
     Processor.main()
-
