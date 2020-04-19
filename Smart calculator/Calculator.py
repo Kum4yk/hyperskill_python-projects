@@ -37,23 +37,6 @@ class SmartCalculator:
                 return None
             self.variables[name] = self.variables[value]
 
-    def main(self):
-        while self.run_state:
-            values = input().rstrip()
-            if values == '':
-                continue
-            elif values[0] == "/":
-                self.do_command(values)
-                continue
-            elif values.__contains__("="):
-                self.assignment_variable(values)
-                continue
-            elif values.count("-") == 0 and values.count("+") == 0:
-                print(self.variables.get(values.strip(), "Unknown variable"))
-                continue
-            values = values.split()
-            print(self.string_handling(values))
-
     def string_handling(self, input_string: list):
         wait_number = True
         sign = 0
@@ -93,58 +76,69 @@ class SmartCalculator:
         return result_is_bad
 
     def cheat(self, input_str: str):
+        input_str = input_str + "+"  # a little cheat for calculate
         brackets = list()
-        prev_is_num = False
         current_value = ""
         num_stack = [0]
+        str_for_eval = ""
 
         for i in range(len(input_str)):
+
             elem = input_str[i]
             if elem == " ":
-                if prev_is_num:
-                    num_stack.append(int(current_value))
-                else:
-                    if current_value not in self.variables:
-                        print("Unknown variable")
-                        break
-                    num_stack.append(self.variables[current_value])
-                current_value = ""
                 continue
-            elif elem == "(" or elem == ")":
-                if SmartCalculator.acts_with_brackets(brackets, elem):
-                    print("Invalid expression")
-                    break
             elif elem in SmartCalculator.operations or elem == "(" or elem == ")":
-                if current_value.isalpha():
-                    pass
+                if elem == "(" or elem == ")":
+                    if SmartCalculator.acts_with_brackets(brackets, elem):
+                        print("Invalid expression")
+                        return None
+                else:
+                    prev = input_str[i-1]
+                    if prev == "*" or prev == "/" or prev == "^":
+                        print("Invalid expression")
+                        return None
+                    if elem == "^":
+                        elem = "**"
 
-            elif elem.isdigit():
-                if prev_is_num:
-                    current_value += elem
-                else:
-                    current_value = elem
-                prev_is_num = True
-            elif elem.isalpha():
-                if prev_is_num:
-                    current_value = elem
-                else:
-                    current_value += elem
-                prev_is_num = False
-        if not brackets:
+                if current_value.isnumeric():
+                    num_stack.append(int(current_value))
+                elif current_value.isalpha():
+                    if self.variables.get(current_value, None) is None:
+                        print("Unknown variable")
+                        return None
+                    num_stack.append(self.variables.get(current_value))
+                    current_value = str(self.variables.get(current_value))
+
+                str_for_eval += current_value + elem
+                current_value = ""
+            else:
+                current_value += elem
+
+        if brackets:
             print("Invalid expression")
+            return None
+        return str_for_eval[:-1], num_stack
 
-    def calculate_input(self, input_str: str):
-        operations_stack = list()
-        polish_notation = list()
-        brackets = list()
-        wait_number = True
-        sign = 0  # val if sign % 2 == 0 else -val
-        prev_is_num = False
-        for elem in input_str:
-            if elem == " ":
+    def main(self):
+        while self.run_state:
+            values = input().strip()
+            if values == '':
                 continue
+            elif values[0] == "/":
+                self.do_command(values)
+                continue
+            elif values.__contains__("="):
+                self.assignment_variable(values)
+                continue
+
+            result = self.cheat(values)
+            if result is None:
+                continue
+            else:
+                result = eval(result[0])
+                result = int(result) if float(result) - int(result) == 0 else result
+                print(result)
 
 
 if __name__ == "__main__":
     SmartCalculator().main()
-
